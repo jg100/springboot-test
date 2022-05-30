@@ -11,13 +11,14 @@ import org.springframework.core.io.Resource;
 
 @SpringBootApplication
 public class Driver {
-
-
 	//Bean definitions
-
 	public static void main(String[] args) {
+
+		//Creating a Spring Context manually
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
+		User usr = (User) context.getBean("user");
+		usr.displayInfo();
 
 	}
 
