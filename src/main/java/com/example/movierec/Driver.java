@@ -10,7 +10,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 @SpringBootApplication
-public class MovierecApplication {
+public class Driver {
 
 
 	//Bean definitions
