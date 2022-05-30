@@ -27,4 +27,6 @@
         <property name="name" value="Joel G"></property>
     </bean>
 
+    <bean class="com.example.movierec.InitUser" />
+
 </beans>
