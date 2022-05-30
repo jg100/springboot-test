@@ -7,7 +7,23 @@
       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd" >
 
 
-<bean id="userbean" class="com.example.movierec.User">
+    <!--
+    Scopes: Singleton (one obj), prototype (new obj for every call)
+
+    Setup and teardown of bean parameters
+    initmethod = (...) -> specific method to be called on the bean upon instantiation
+    destroy-method = (...) -> method called on the bean when removed from the container
+
+    If you are using Spring's IoC container in a non-web application environment; for example, in a rich client desktop
+    environment, you register a shutdown hook with the JVM. Doing so ensures a graceful shutdown and calls the relevant
+    destroy methods on your singleton beans so that all resources are released.
+
+    It is recommended that you do not use the InitializingBean or DisposableBean callbacks,
+    because XML configuration gives much flexibility in terms of naming your method.
+
+    -->
+
+<bean id="userbean" class="com.example.movierec.User" scope="singleton" init-method="init" destroy-method="destroy">
         <property name="name" value="Joel G"></property>
     </bean>
 

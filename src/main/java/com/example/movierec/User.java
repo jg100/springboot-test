@@ -3,6 +3,14 @@ package com.example.movierec;
 public class User {
     private String name;
 
+    public void init() {
+        System.out.println("Init method called...");
+    }
+
+    public void destroy() {
+        System.out.println("Destroy method called...");
+    }
+
     public String getName() {
         return name;
     }
