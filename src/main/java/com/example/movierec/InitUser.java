@@ -1,7 +1,9 @@
 package com.example.movierec;
 
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -39,6 +41,4 @@ public class InitUser implements BeanPostProcessor {
 
         return bean;
     }
-
-
 }
