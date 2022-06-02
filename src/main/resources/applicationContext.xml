@@ -44,12 +44,22 @@
     </bean>
 
 
-    <!-- Def. for text editor bean using inner bean -->
+    <!-- Def. for text editor bean using inner bean. Equivalent of making an inner class-->
     <bean id="textEditor" class="com.example.movierec.textedit.TextEditor">
         <property name="spellChecker">
             <bean id="spellChecker" class="com.example.movierec.textedit.SpellChecker"></bean>
         </property>
     </bean>
+
+<!-- Spring has the following for collections:
+<list> helps in wiring (injecting list of values)
+<set> Wiring set of values without duplicates
+<map> Injection collection of name value pairs
+<props> Inject collection of name-val pairs where
+name and val are both Strings
+-->
+
+
 
 
 </beans>
