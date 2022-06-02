@@ -1,10 +1,10 @@
 package com.example.movierec;
 
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.context.annotation.Bean;
+
+import org.springframework.stereotype.Component;
 
 /**
  * Interface defines callback methods that provide instantiation logic,
@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Bean;
  */
 
 //BeanPostProcessor implements the ordered interface
-
+@Component
 public class InitUser implements BeanPostProcessor {
     /**
      *
@@ -29,16 +29,15 @@ public class InitUser implements BeanPostProcessor {
      * @return Any obj can be returned
      * @throws BeansException
      */
-    public Object postProcessBeforeInit(Object bean, String beanName) throws
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws
             BeansException {
         System.out.println("***Before init: " + beanName);
 
         return bean;
     }
 
-    public Object postProcessAfterInit(Object bean, String beanName) throws BeansException {
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("***After init: " + beanName);
-
         return bean;
     }
 }
