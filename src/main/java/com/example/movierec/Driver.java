@@ -13,6 +13,11 @@ import org.springframework.core.io.Resource;
 @SpringBootApplication
 public class Driver {
 	//Bean definitions
+
+	/**
+	 * Adding comments test
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		//Creating a Spring Context manually
