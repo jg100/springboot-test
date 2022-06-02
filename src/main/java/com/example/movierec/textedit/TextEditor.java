@@ -17,10 +17,6 @@ package com.example.movierec.textedit;
 public class TextEditor {
     private SpellChecker spellChecker;
 
-    public TextEditor(SpellChecker spellCheck) {
-        this.spellChecker = spellCheck;
-    }
-
     public void setSpellChecker(SpellChecker spellChecker) {
         this.spellChecker = spellChecker;
     }

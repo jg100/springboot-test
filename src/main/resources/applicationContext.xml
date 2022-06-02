@@ -59,6 +59,43 @@
 name and val are both Strings
 -->
 
+    <bean id="collectionTest" class="com.example.movierec.collection.CollectionTest">
+        <property name="addrList">
+            <list>
+                <value>Joel</value>
+                <value>Milo </value>
+                <value>Joe</value>
+                <value>Timmy</value>
+            </list>
+        </property>
+
+        <property name="addrSet">
+        <set>
+            <value>Joel</value>
+            <value>Joel</value>
+            <value>Milo</value>
+        </set>
+        </property>
+
+        <property name="addrMap">
+            <map>
+                <entry key="1" value="Joel"/>
+                <entry key="2" value="Milo"/>
+                <entry key="3" value="NotMilo"/>
+            </map>
+        </property>
+
+        <property name="addrProp">
+            <props>
+                <prop key="Joel"> Giannelli </prop>
+                <prop key="Milo"> Brown </prop>
+                <prop key="NotJoel"> NotGiannelli </prop>
+                <prop key="Timmy"> Lamp </prop>
+            </props>
+
+        </property>
+    </bean>
+
 
 
 

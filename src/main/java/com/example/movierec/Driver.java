@@ -32,10 +32,11 @@ public class Driver {
 		System.out.println("******Collections Spring Testing*****");
 		CollectionTest ct = (CollectionTest) context.getBean("collectionTest");
 
-		ct.getAddrMap();
-		ct.getAddrList();
-		ct.getAddrProp();
-		ct.getAddrList();
+		System.out.println("Map:\n" + ct.getAddrMap());
+		System.out.println("List: " + ct.getAddrList());
+		System.out.println("Prop: " + ct.getAddrProp());
+		System.out.println("Set:" + ct.getAddrSet());
+
 
 		context.registerShutdownHook();
 	}
