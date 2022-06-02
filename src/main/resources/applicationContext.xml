@@ -23,13 +23,24 @@
 
     -->
 
-<bean id="userbean" class="com.example.movierec.User" scope="singleton" init-method="init" destroy-method="destroy"
+    <bean id="userbean" class="com.example.movierec.User" scope="singleton" init-method="init" destroy-method="destroy"
       parent="person">
     <property name="name" value="Joel G"></property>
-</bean>
+    </bean>
+
 
     <bean id="person" class="com.example.movierec.Person">
         <property name="name" value="Not Joel"></property>
+    </bean>
+
+    <!-- Bean Defintion Template(s)
+     Templates that can be used by other child bean ddefintions
+     Specify the class and abstract param
+
+     Cannot be instantiated on it's own, similar to an interface
+     -->
+    <bean id="beanTemplate" abstract="true">
+        <property name="name" value="Template Joel"></property>
     </bean>
 
 </beans>

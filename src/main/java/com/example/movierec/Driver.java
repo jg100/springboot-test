@@ -23,7 +23,10 @@ public class Driver {
 		//Creating a Spring Context manually
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		User usr = (User) context.getBean("userbean");
+		Person pers = (Person) context.getBean("person");
+
 		usr.displayInfo();
+		System.out.println(pers.getName());
 
 		context.registerShutdownHook();
 	}
