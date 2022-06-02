@@ -21,4 +21,12 @@ public class TextEditor {
         this.spellChecker = spellCheck;
     }
 
+    public void setSpellChecker(SpellChecker spellChecker) {
+        this.spellChecker = spellChecker;
+    }
+
+    public void spellCheck() {
+        spellChecker.checkSpelling();
+    }
+
 }

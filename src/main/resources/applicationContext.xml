@@ -43,4 +43,13 @@
         <property name="name" value="Template Joel"></property>
     </bean>
 
+
+    <!-- Def. for text editor bean using inner bean -->
+    <bean id="textEditor" class="com.example.movierec.textedit.TextEditor">
+        <property name="spellChecker">
+            <bean id="spellChecker" class="com.example.movierec.textedit.SpellChecker"></bean>
+        </property>
+    </bean>
+
+
 </beans>
