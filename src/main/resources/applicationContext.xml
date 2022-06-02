@@ -23,8 +23,13 @@
 
     -->
 
-<bean id="userbean" class="com.example.movierec.User" scope="singleton" init-method="init" destroy-method="destroy">
-        <property name="name" value="Joel G"></property>
+<bean id="userbean" class="com.example.movierec.User" scope="singleton" init-method="init" destroy-method="destroy"
+      parent="person">
+    <property name="name" value="Joel G"></property>
+</bean>
+
+    <bean id="person" class="com.example.movierec.Person">
+        <property name="name" value="Not Joel"></property>
     </bean>
 
 </beans>
