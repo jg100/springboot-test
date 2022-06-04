@@ -1,0 +1,20 @@
+Auto-wiring
+
+SpringBoot can auto-wire relationships between beans without explicit connection
+
+Auto-wiring modes:
+no: Default no auto wiring
+byName: Auto-wire by the property name. Looks at the properties of the beans on which
+autowire attr is set to byName
+
+byType: Auto-wire by property data type
+
+Constructor: Similar to byType but applies to constructor args.
+
+Autodetect: Spring tries to wire by constructor. If it doesn't work then by type
+
+
+Can auto-wire by annotations: XML is resolved last and will override any annotations
+
+
+Annotations achieve the same result as XML configuration
