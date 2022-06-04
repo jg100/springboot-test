@@ -12,3 +12,6 @@ byType: Auto-wire by property data type
 Constructor: Similar to byType but applies to constructor args.
 
 Autodetect: Spring tries to wire by constructor. If it doesn't work then by type
+
+
+Can auto-wire by annotations: XML is resolved last and will override any annotations
