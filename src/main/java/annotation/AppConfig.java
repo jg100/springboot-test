@@ -11,7 +11,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     @Bean
     public Foo foo() {
-        return new Foo();
+        //Constructor injecting the dependency
+        return new Foo(bar());
     }
 
     @Bean
