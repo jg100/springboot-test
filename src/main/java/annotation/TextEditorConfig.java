@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class TextEditorConfig {
     @Bean
     public TextEditor texteditor() {
+        //Error
         return new TextEditor(spellchecker());
     }
 
