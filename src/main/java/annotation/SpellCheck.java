@@ -1,9 +1,9 @@
 package annotation;
 
-public class SpellChecker {
+public class SpellCheck {
     private String test;
 
-    public SpellChecker() {
+    public SpellCheck() {
         System.out.println("Spell Check Constructor");
     }
 

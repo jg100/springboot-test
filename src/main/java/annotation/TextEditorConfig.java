@@ -1,19 +1,18 @@
 package annotation;
 
 import com.example.movierec.textedit.SpellChecker;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
 @Configuration
 public class TextEditorConfig {
     @Bean
-    public TextEditor texteditor() {
+    public TextEditor textEditor() {
         //Error
-        return new TextEditor(spellchecker());
+        return new TextEditor( spellChecker() );
     }
 
     @Bean
-    public SpellChecker spellchecker() {
+    public SpellChecker spellChecker() {
         return new SpellChecker();
     }
 
